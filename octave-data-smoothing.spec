@@ -1,10 +1,9 @@
 %define	pkgname data-smoothing
-%define name	octave-%{pkgname}
 
 Summary:	Algorithms for smoothing noisy data with Octave
-Name:		%{name}
+Name:		octave-%{pkgname}
 Version:	1.2.0
-Release:	2
+Release:	3
 Source0:	%{pkgname}-%{version}.tar.gz
 License:	GPLv2+
 Group:		Sciences/Mathematics
@@ -13,8 +12,8 @@ Conflicts:	octave-forge <= 20090607
 Requires:	octave >= 2.9.7
 Requires:	octave-optim >= 1.0.3
 BuildRequires:	octave-devel >= 2.9.7
-BuildRequires:	mesagl-devel
-BuildRequires:	mesaglu-devel
+BuildRequires:	pkgconfig(gl)
+BuildRequires:	pkgconfig(glu)
 BuildArch:	noarch
 
 %description
@@ -43,12 +42,3 @@ mv %{pkgname}-%{version}/DESCRIPTION .
 %defattr(-,root,root)
 %doc COPYING DESCRIPTION
 %{_datadir}/octave/packages/%{pkgname}-%{version}
-
-
-
-%changelog
-* Tue Jun 28 2011 Lev Givon <lev@mandriva.org> 1.2.0-1mdv2011.0
-+ Revision: 687820
-- import octave-data-smoothing
-
-
