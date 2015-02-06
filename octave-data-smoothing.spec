@@ -3,7 +3,7 @@
 Summary:	Algorithms for smoothing noisy data with Octave
 Name:		octave-%{pkgname}
 Version:	1.2.0
-Release:	4
+Release:	5
 Source0:	%{pkgname}-%{version}.tar.gz
 License:	GPLv2+
 Group:		Sciences/Mathematics
