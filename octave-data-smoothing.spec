@@ -1,26 +1,27 @@
 %global octpkg data-smoothing
 
 Summary:	Algorithms for smoothing noisy data with Octave
-Name:		octave-%{octpkg}
+Name:		octave-data-smoothing
 Version:	1.3.0
-Release:	1
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Release:	2
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://packages.octave.org/%{octpkg}/
-BuildArch:	noarch
+Url:		https://packages.octave.org/data-smoothing/
+Source0:	https://downloads.sourceforge.net/octave/data-smoothing-%{version}.tar.gz
 
-BuildRequires:	octave-devel >= 3.6.0
-BuildRequires:	octave-optim
+BuildRequires:  octave-devel >= 3.6.0
+BuildRequires:  octave-optim >= 1.0.3
 
 Requires:	octave(api) = %{octave_api}
-Requires:	octave-optim
+Requires:  	octave-optim >= 1.0.3
 
 Requires(post): octave
 Requires(postun): octave
 
+BuildArch:	noarch
+
 %description
-Algorithms for smoothing noisy data
+Algorithms for smoothing noisy data.
 
 %files
 %license COPYING
@@ -32,9 +33,6 @@ Algorithms for smoothing noisy data
 
 %prep
 %autosetup -p1 -n %{octpkg}
-
-# remove backup files
-#find . -name \*~ -delete
 
 %build
 %octave_pkg_build
