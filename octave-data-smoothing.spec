@@ -3,7 +3,7 @@
 Summary:	Algorithms for smoothing noisy data with Octave
 Name:		octave-data-smoothing
 Version:	1.3.0
-Release:	2
+Release:	3
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/data-smoothing/
